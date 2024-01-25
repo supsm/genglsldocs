@@ -2,7 +2,9 @@
 Generate simple Markdown documentation for GLSL source files (may also work to an extent with C/C++ or related languages). It can only understand basic function and variable declarations (simple structs are planned). Please note this software is WIP. 
 
 ## Demo
-[Source file](https://github.com/vram-guild/frex/blob/1.19/common/src/main/resources/assets/frex/shaders/lib/math.glsl):
+<details>
+<summary><a href="https://github.com/vram-guild/frex/blob/1.19/common/src/main/resources/assets/frex/shaders/lib/math.glsl">Source file:</a></summary>
+
 ```glsl
 /******************************************************
   frex:shaders/lib/math.glsl
@@ -83,6 +85,7 @@ float frx_luminance(vec3 color) {
 	return dot(color.rgb, vec3(0.299, 0.587, 0.114));
 }
 ```
+</details>
 <details>
 <summary>Generated documentation:</summary>
   
