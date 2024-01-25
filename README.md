@@ -1,6 +1,14 @@
 # genglsldocs
 Generate simple Markdown documentation for GLSL source files (may also work to an extent with C/C++ or related languages). It can only understand basic function and variable declarations (simple structs are planned). Please note this software is WIP. 
 
+## Use
+Pass a list of directories to parse as command-line arguments. All .vert, .frag, .glsl, and .h files are parsed, other file extensions must be specified in source. Directory structure is preserved.  
+`-o <dir>` - specify global output directory (defaults to working directory)  
+`--dir <dir>` - use after each input directory to specify an output directory relative to global output directory for said input (optional)  
+
+Example: `genglsldocs path/to/src path/to/src2 --dir abc -o out`  
+Documentation for path/to/src/util/noise.glsl is placed in out/util/noise.glsl.md, and path/to/src2/main.frag corresponds to out/abc/main.frag.md
+
 ## Demo
 <details>
 <summary><a href="https://github.com/vram-guild/frex/blob/1.19/common/src/main/resources/assets/frex/shaders/lib/math.glsl">Source file:</a></summary>
